@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* ---- App Container ---- */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ---- Navbar ---- */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #1a237e;
+    color: #fff;
+    padding: 0 24px;
+    height: 56px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar-brand a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 16px;
+}
+
+.navbar-item {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.navbar-item:hover {
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+}
+
+.navbar-end {
+    display: flex;
+    gap: 8px;
+}
+
+/* ---- Main Wrapper (Sidebar + Content) ---- */
+.main-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+    width: 220px;
+    background: #263238;
+    color: #fff;
+    padding-top: 16px;
+    flex-shrink: 0;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-item {
+    margin: 4px 0;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.2s, color 0.2s;
+}
+
+.sidebar-link:hover {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+}
+
+.sidebar-link span {
+    font-size: 0.95rem;
+}
+
+/* ---- Content ---- */
+.content {
+    flex: 1;
+    padding: 32px;
+}
+
+.content h1 {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+}
+
+.content p {
+    font-size: 1rem;
+    color: #555;
+}
