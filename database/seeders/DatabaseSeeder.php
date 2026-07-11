@@ -17,9 +17,19 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
+        // User demo untuk keperluan testing & tugas RPL.
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'test@example.com',
+        ]);
+
+        // Urutan penting: categories dulu (dipakai transaksi & budget),
+        // baru user_settings, transactions, dan budgets.
+        $this->call([
+            CategorySeeder::class,
+            UserSettingSeeder::class,
+            TransactionSeeder::class,
+            BudgetSeeder::class,
         ]);
     }
 }
